@@ -1,0 +1,42 @@
+#container-produto {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.card-produto {
+    box-shadow: 0 0em 0.25em 0.25em var(--cor-borda);
+    border-radius: 2em;
+    width: 20%;
+    margin: 2em 0 2em 0;
+    padding: 0.5em;
+}
+
+.card-img{
+    width: 47%;
+    padding-bottom: 2em;
+}
+
+.card-img:hover {
+    scale: 105%;
+    transition: 0.4s;
+}
+
+.card-marca, .card-nome, .card-preco {
+    padding: 0.4em;
+}
+
+.btn-adicionar-ao-carrinho {
+    border: none;
+    border-radius: 1em;
+    padding: 0.5em;
+    width: 20%;
+    background: var(--cor-borda);
+}
+
+.btn-adicionar-ao-carrinho:hover {
+    background-color: var(--cinza-escuro);
+    transition: 0.4s;
+}

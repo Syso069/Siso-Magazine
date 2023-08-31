@@ -1,0 +1,22 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--laranja);
+    padding: 2em;
+    z-index: 10;
+}
+
+.navbar-botao {
+    margin-left: 90%;  
+    width: 50%;
+    background-color: transparent;
+    text-align: center; 
+}
+
+.btn-carrinho, .btn-historico {
+    color: var(--branco);
+    background-color: var(--laranja);
+    border: none;
+    padding: 1em; 
+}
