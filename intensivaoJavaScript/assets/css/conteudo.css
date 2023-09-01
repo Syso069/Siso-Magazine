@@ -25,6 +25,10 @@
     border: none;
 }
 
+#produtos-carrinho {
+    overflow-y: auto;
+}
+
 .card-produtos-carrinho {
     display: flex;
     position: relative;
@@ -38,7 +42,8 @@
 .btn-card {
     position: absolute;
     border: none;
-    left: 20.5em;
+    left: 19.5em;
+    bottom: 8.5em;
     color: var(--cor-borda);
 }
 
@@ -78,4 +83,19 @@
     border-radius: 10px;
     padding: 0.25em;
     margin: 2em;
+}
+
+.contador-produtos {
+    color: var(--preto);
+    display: flex;
+    align-items: end;
+    font-size: 16px;
+}
+
+.adiciona-produtos, .remove-produtos {
+    border: none;
+}
+
+.numero-produtos {
+    padding: 0 0.2em;
 }

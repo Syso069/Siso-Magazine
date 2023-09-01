@@ -5,6 +5,7 @@
     background-color: var(--laranja);
     padding: 2em;
     z-index: 10;
+    margin-bottom: 6em;
 }
 
 .navbar-botao {
