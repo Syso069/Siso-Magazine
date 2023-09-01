@@ -99,3 +99,13 @@
 .numero-produtos {
     padding: 0 0.2em;
 }
+
+#preco-total {
+    color: var(--laranja);
+    background-color: var(--branco);
+    border: solid 2px var(--branco);
+    border-radius: 10px;
+    padding: 0.25em;
+    margin: 0 2em;
+    margin-bottom: -1.5em;
+}

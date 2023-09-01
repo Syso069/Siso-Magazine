@@ -1,4 +1,4 @@
-import { catalogo } from "./utilidades.js";
+import { catalogo, salvarLocalStorage } from "./utilidades.js";
 
 const idsProdutoCarrinhoComQuantidade = {};
 
@@ -19,11 +19,15 @@ export function inicializarCarrinho() {
 
 function removerDoCarrinho(idProduto) {
     delete idsProdutoCarrinhoComQuantidade[idProduto];
+    salvarLocalStorage("carrinho", idsProdutoCarrinhoComQuantidade);
+    atualizarPrecoCarrinho();
     renderizarProdutosCarrinho();
 }
 
 function incrementarQuantidadeProduto(idProduto) {
     idsProdutoCarrinhoComQuantidade[idProduto]++;
+    salvarLocalStorage("carrinho", idsProdutoCarrinhoComQuantidade);
+    atualizarPrecoCarrinho();
     atualizaInformacaoQuantidade(idProduto);
 }
 
@@ -33,12 +37,13 @@ function decrementarQuantidadeProduto(idProduto) {
         return;
     }
     idsProdutoCarrinhoComQuantidade[idProduto]--;
+    salvarLocalStorage("carrinho", idsProdutoCarrinhoComQuantidade);
+    atualizarPrecoCarrinho();
     atualizaInformacaoQuantidade(idProduto);
 }
 
 function atualizaInformacaoQuantidade(idProduto) {
-    document.getElementById(`quantidade-${idProduto}`).innerText = 
-    idsProdutoCarrinhoComQuantidade[idProduto];
+    document.getElementById(`quantidade-${idProduto}`).innerText = idsProdutoCarrinhoComQuantidade[idProduto];
 }
 
 function desenharProdutoNoCarrinho(idProduto) {
@@ -92,5 +97,16 @@ export function adicionarAoCarrinho(idProduto) {
     }
 
     idsProdutoCarrinhoComQuantidade[idProduto] = 1;
+    salvarLocalStorage("carrinho", idsProdutoCarrinhoComQuantidade);
     desenharProdutoNoCarrinho(idProduto);
+    atualizarPrecoCarrinho();
+}
+
+export function atualizarPrecoCarrinho() {
+    const precoCarrinho = document.getElementById("preco-total");
+    let precoTotalCarrinho = 0;
+    for(const idProdutoNoCarrinho in idsProdutoCarrinhoComQuantidade) {
+        precoTotalCarrinho += catalogo.find((p) => p.id === idProdutoNoCarrinho)  * idsProdutoCarrinhoComQuantidade[idProdutoNoCarrinho];
+    }
+    precoCarrinho.innerText = `Total: $${precoTotalCarrinho}`;
 }
