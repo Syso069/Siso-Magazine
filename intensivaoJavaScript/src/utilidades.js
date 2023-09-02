@@ -68,3 +68,33 @@ export const catalogo = [
 export function salvarLocalStorage(chave, informacao) {
     localStorage.setItem(chave, JSON.stringify(informacao));
 }
+
+export function lertLocalStorage(chave) {
+    return JSON.parse(localStorage.getItem(chave));
+}
+
+export function apagarDoLocalStorage(chave) {
+    localStorage.removeItem(chave);
+}
+
+export function desenharProdutoNoCarrinhoSimples(idProduto, idContainerHtml, quantidadeProduto) {
+    const produtos = catalogo.find((produto) => produto.id === idProduto);
+
+    const containerCardProduto = document.getElementById(idContainerHtml);
+
+    const cardProdutoCarrinho = `
+    <article class="card-produtos-carrinho">
+            <img src="./assets/img/${produtos.imagemDoProduto}" alt="Carrinho: ${produtos.nome}" class="img-card-produtos-carrinho">
+        <div class="card-descricao">
+            <p class="titulo-decricao">${produtos.nome}</p>
+            <p class="tamanho-descricao">Tamanho: M</p>
+            <p class="valor-descricao">$${produtos.preco}</p>
+        </div>
+        <div class="contador-produtos">
+            <p class="numero-produtos id="quantidade-${produtos.id}">${quantidadeProduto}</p>
+        </div>
+    </article>
+    `;
+
+    containerCardProduto.innerHTML += cardProdutoCarrinho;   
+}

@@ -1,0 +1,31 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#filtros {
+    display: flex;
+    margin-bottom: 4em;
+}
+
+#exibir-todos, #exibir-masculinos, #exibir-femininos {
+    visibility: hidden;
+}
+
+.filtro-exibir-todos:checked + label, 
+.filtro-exibir-masculinos:checked + label,
+.filtro-exibir-femininos:checked + label {
+    background-color: var(--laranja);
+    border-radius: 1em;
+    padding: 0.5em;
+    color: var(--branco);
+    font-size: 16px;
+}
+
+.todos,
+.masculino,
+.feminino {
+    user-select: none;
+    cursor: pointer;
+}

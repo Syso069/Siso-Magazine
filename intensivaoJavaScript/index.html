@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,19 +19,39 @@
         </div>
         <section id="produtos-carrinho">
         </section>
-        <p id="preco-total">Total: $400</p>
-        <button class="btn-comprar">Finalizar Compra</button>
+        <p id="preco-total" class="total">Total: $400</p>
+        <button id="finalizar-compra" class="btn-comprar">Finalizar Compra</button>
       </section>
       <header class="navbar">
+        <a href="/">
           <img src="./assets/img/Logo.png" alt="Logo siso magazine" class="navbar-img">
+        </a>
 
           <div class="navbar-btn">
             <button class="btn-carrinho" id="abrir-carrinho"><i class="fa-solid fa-cart-shopping"></i></button>
-            <button class="btn-historico"><i class="fa-solid fa-user"></i></button>
+            <a href="./pedidos.html">
+              <button class="btn-historico"><i class="fa-solid fa-user"></i></button>
+            </a>
           </div>
       </header>
 
-      <main>
+      <main class="container">
+        <section id="filtros">
+          <div>
+            <input id="exibir-todos" type="radio" name="filtro" class="filtro-exibir-todos" checked/>
+            <label for="exibir-todos" class="todos">Todos</label>
+          </div>
+
+          <div class="">
+            <input id="exibir-masculinos" type="radio" name="filtro" class="filtro-exibir-masculinos"/>
+            <label for="exibir-masculinos" class="masculino">Masculino</label>
+          </div>
+
+          <div>
+            <input id="exibir-femininos" type="radio" name="filtro" class="filtro-exibir-femininos"/>
+            <label for="exibir-femininos" class="feminino">Feminino</label>
+          </div>
+        </section>
         <section id="container-produto">
         </section>
       </main>

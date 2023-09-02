@@ -1,0 +1,76 @@
+.container-formulario {
+    display: flex;
+    margin: 2em;
+}
+
+.formulario {
+    width: 30%;
+    height: 100vh;
+    box-shadow: 0 0 0.25em 0.05em;
+    border-radius: 10px;
+    padding: 1em 2em;
+    margin: 2em;
+}
+
+.formulario-nome, 
+.formulario-email, 
+.formulario-telefone,
+.formulario-cartao,
+.formulario-entrega {
+    display: flex;
+    flex-direction: column;
+}
+
+.dados-formulario {
+    text-align: center;
+    padding-bottom: 4em;
+    text-transform: uppercase;
+    font-size: 24px;
+}
+
+.campo-nome,
+.campo-email,
+.campo-telefone,
+.campo-cartao,
+.campo-entrega {
+    margin: 1em 0;
+    padding: 0.5em;
+    border-radius: 10px;
+    border: 1px solid #acabab;
+    background-color: #dddddd;
+}
+
+.formulario-cartao-seguranca,
+.formulario-entrega-complemento {
+    display: flex;
+    justify-content: space-between;
+}
+
+#container-produtos-checkout {
+    width: 60%;
+}
+
+#produtos-checkout {
+    overflow-y: auto;
+}
+
+#celula-checkout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.checkout-preco-total,
+.checkout-btn-comprar {
+    color: var(--branco);
+    background-color: var(--laranja);
+    border: solid 2px var(--laranja);
+    border-radius: 10px;
+    padding: 0.25em;
+    margin: 0.5em 0;
+}
+
+.checkout-btn-comprar {
+    cursor: pointer;
+}

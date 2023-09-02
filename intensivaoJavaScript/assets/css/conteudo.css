@@ -23,6 +23,7 @@
     color: var(--branco);
     background-color: var(--laranja);
     border: none;
+    cursor: pointer;
 }
 
 #produtos-carrinho {
@@ -72,8 +73,14 @@
     color:  #65c565;
 }
 
-#preco-total {
-    padding: 2em;
+.total {
+    color: var(--laranja);
+    background-color: var(--branco);
+    border: solid 2px var(--branco);
+    border-radius: 10px;
+    padding: 0.25em;
+    margin: 0 2em;
+    margin-bottom: -1.5em;
 }
 
 .btn-comprar {
@@ -83,6 +90,7 @@
     border-radius: 10px;
     padding: 0.25em;
     margin: 2em;
+    cursor: pointer;
 }
 
 .contador-produtos {
@@ -98,14 +106,4 @@
 
 .numero-produtos {
     padding: 0 0.2em;
-}
-
-#preco-total {
-    color: var(--laranja);
-    background-color: var(--branco);
-    border: solid 2px var(--branco);
-    border-radius: 10px;
-    padding: 0.25em;
-    margin: 0 2em;
-    margin-bottom: -1.5em;
 }

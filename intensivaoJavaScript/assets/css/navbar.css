@@ -20,4 +20,5 @@
     background-color: var(--laranja);
     border: none;
     padding: 1em; 
+    cursor: pointer;
 }

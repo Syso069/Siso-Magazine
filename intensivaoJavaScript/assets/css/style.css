@@ -1,10 +1,13 @@
 @import url(card.css);
 @import url(navbar.css);
 @import url(conteudo.css);
+@import url(filtros.css);
+@import url(checkout.css);
 
 :root {
     --cor-borda: #B0A7A1;
     --cinza-escuro: #929292;
+    --cinza-claro: #CCCCCC;
     --cor-de-fundo: #EBECEE;
     --branco: #FFFFFF;
     --laranja: #EB9B00;

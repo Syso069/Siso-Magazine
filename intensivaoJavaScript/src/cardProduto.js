@@ -4,7 +4,7 @@ import { catalogo } from "./utilidades.js";
 export function renderizarCatalogo() {
     for(const produtoCatalogo of catalogo) {
         const cardProduto = 
-        `<div class="card-produto card-produto-${produtoCatalogo.id}">
+        `<div class="card-produto ${produtoCatalogo.feminino ? "feminino" : "masculino"}" id="card-produto-${produtoCatalogo.id}">
             <img src="./assets/img/${produtoCatalogo.imagemDoProduto}" alt="Primeiro produto do Siso Magazine" class="card-img">
             <p class="card-marca ">${produtoCatalogo.marca}</p>
             <p class="card-nome">${produtoCatalogo.nome}</p>
